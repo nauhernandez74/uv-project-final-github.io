@@ -1,0 +1,71 @@
+<DOCTYPE  HTML>
+
+<html long="es">
+ <head>
+   <meta charset=utf-8>
+   <title>" Multiplexores "</title>
+ </head>
+ <body bgcolor="black" text="white">
+<center><h1> Multiplexores </h1></center><br/><br/>
+<h3>Definición</h3><br/>
+<p align="justify">
+El multiplexor es el circuito lógico combinacional equivalente a un interruptor
+mecánico giratorio de varias posiciones, tal como el componente que sirve para seleccionar las bandas de un receptor de radio.<br/><br/>
+Permite dirigir la información binaria procedente de diversas fuentes a una única
+línea de salida, para ser transmitida a través de ella, a un destino común.<br/><br/>
+Disponen de: hasta 2n líneas de entrada de datos, una única de salida y n entradas de
+selección; que habilitan y ponen en contacto uno de los terminales de entrada de datos con el de salida.<br/><br/>
+El circuito combinacional integrado multiplexor, suele tener: 8 entradas de datos (bits), 3
+entradas de selección (address) y una única salida de datos.<br/><br/><br/>
+Por ejemplo cuando en las entradas de selección está activa la combinación 010
+Equivalente a la entrada de información número 2, en la salida aparecerá el bit que en ese momento haya en
+la entrada 2 es decir un 1, ya que esta es la entrada que hemos seleccionado para comunicarla con la salida.<br/><br/><br/>
+<center><img src="multi1.gif" width="900" height="550"></center><br/><br/><br/>
+<center><img src="multi2.jpg" width="900" height="550"></center><br/><br/><br/>
+<center><img src="multi3.jpg" width="900" height="550"></center><br/><br/><br/>
+</p>
+<left><h3> Aplicaciones de los multiplexores: Implementación de funciones lógicas con multiplexores </h3></left><br/>
+<p align="justify">
+Una de las principales aplicaciones de los multiplexores es que permite implementar
+ecuaciones correspondientes al funcionamiento de una función lógica, reemplazando con un
+solo chip gran cantidad de cableado y de circuitos integrados.<br/><br/>
+Para lo que se debe seguir el siguiente protocolo:<br/><br/>
+Se conectan a las entradas de selección las variables de entrada del problema.
+Se conectan las entradas de dato a 1 o a 0, según convenga a la configuración escogida con la entrada de selección.
+Cuando no disponemos de suficientes entradas de selección en un multiplexor para conectar con
+las entradas del problema, podemos continuar empleándolos, estableciendo en las entradas de dato
+los valores adecuados correspondientes con ayuda de lógica adicional y en función de la variable
+que no conectamos a la entrada de selección.<br/><br/>
+Ejemplo: Empleo de multiplexores de igual número de entradas de control que de variables a implementar.
+Supongamos, por ejemplo, que queremos implementar la siguiente función:<br/><br/>
+<center><img src="multi4.jpg" width="900" height="550"></center><br/><br/><br/>
+</p>
+<p align="justify">
+La función tiene cuatro variables de entradas, A, B, C, D, con lo que existen combinadas,
+dan lugar a 16 combinaciones posibles. Empleando un multiplexor de 4 entradas de control, se dispondrán
+de 16 canales de datos, por lo tanto uno por cada posible combinación de las variables de entrada de la función lógica.<br/><br/>
+Cada término que constituye la función corresponde a las de cada combinación de las variables de entrada
+que hacen 1 dicha función, por lo que si aplicamos las variables de la función a las entradas de selección y
+conectamos a 1 los canales de entrada que se corresponden con las combinaciones que intervienen en la función,
+poniendo a 0 el resto de los canales, tendremos la función implementada.<br/><br/>
+Ejemplo: Empleo de multiplexores en funciones con un número de entradas de control inferior en una unidad al de
+variables de la función a implementar.
+Es posible implementar funciones lógicas de n variables con multiplexores de n-1 entradas de control, lo que
+producirá el consiguiente ahorro económico.<br/><br/>
+Con el ejemplo del apartado anterior, confeccionamos la siguiente tabla, donde se agrupan por columnas todas las
+posibles combinaciones de tres de las variables de entrada B, C y D, dejando en las filas las posibilidades de la variable que resta A.<br/><br/>
+<center><img src="multi5.gif" width="900" height="550"></center><br/><br/><br/>
+</p>
+<p align="justify">
+Por tanto, la implementación del circuito se consigue aplicando las variables b, c y d a las
+tres entradas de selección del multiplexor y conectando las entradas de los canales de la siguiente forma:<br/><br/>
+-Canales 0 y 2 conectado a 0.<br/>
+-Canales 1, 4 y 6 conectado a 1.<br/>
+-Canales 3, 5 y 7 a través de un inversor a la variable a, ya que su valor es siempre el contrario del de dicha variable.<br/><br/><br/>
+</p>
+<p align="justify">
+<center><h4> A continuación adjunto un video acerca del tema </h4></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/gTcU-FrRioM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+</p>
+ </body>
+</html>

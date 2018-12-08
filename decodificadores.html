@@ -1,0 +1,80 @@
+<DOCTYPE  HTML>
+
+<html long="es">
+ <head>
+   <meta charset=utf-8>
+   <title>" Decodificadores "</title>
+ </head>
+ <body bgcolor="black" text="white">
+<center><h1> DECODIFIADORES</h1></center><br/><br/>
+<h3>Definición</h3><br/>
+<p align="justify">
+Un decodificador es un circuito integrado que genera todos los minitérminos correspondientes a n entradas:<br/>
+  <center><img src="decodificador1.gif"></center>
+</p>
+<p align="justify">
+En la figura anterior se tiene un decodificador de n entradas y
+salidas. Cada salida corresponde a un minitérmino, empezando con la salida
+superior que corresponde al minitérmino 0.<br/>
+En la siguiente figura se muestra un decodificador 2-4:<br/><br/>
+<center><img src="decodificador2.jpg"></center>
+</p>
+<p align="justify">
+La tabla de verdad correspondiente es:<br/><br/>
+<center><img src="tabla.jpg"></center>
+</p>
+<p align="justify">
+En la tabla de verdad se aprecia que la salida de cada línea es 1 solamente cuando
+se ha seleccionado el minitérmino correspondiente al número de la línea, de otra manera la salida es 0.
+En la practica, la mayoría de los decodificadores tienen las salidas complementadas
+indicándolo mediante una pequeña burbuja o circulo en la salida, es decir, el decodificador
+genera maxitérminos(0) en lugar de minitérminos(1).<br/><br/>
+Una de las aplicaciones de un decodificador es la implementación de funciones Booleanas.
+Una función Booleana de n variables puede ser implementada fácilmente al unir los minitérminos(maxitérminos)
+correspondientes a la función utilizando una compuerta OR(NAND).<br/>
+Ejemplo: <br/><br/><br/>
+<center><img src="funcion.png"></center><br/><br/><br/>
+</p>
+<p align="justify">
+A continuación se adjunta un video para la compresnsion total del tema<br/><br/>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/9W8Z070YAYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br/><br/><br/><br/><br/>
+<center><h1> CODIFICADORES</h1></center><br/><br/>
+<h3>¿QUE SON?</h3><br/>
+<p align="justify">
+Un codificador es considerado como un traductor del lenguaje de la gente al lenguaje de la maquina,
+es decir, traduce una entrada decimal a un numero BCD 8421.<br/>
+El diagrama lógico, en forma simplificada, de un codificador decimal a BCD se muestra en la figura 1de aqui abajo <br/><br/>
+  <center><img src="Codificador1.jpg"></center>
+</p>
+<p align="justify">
+  El codificador tiene diez entradas a la izquierda y cuatro salidas a la derecha,
+  además puede tener una entrada activa, que produce una única salida.<br/><br/>
+  Una característica poco habitual del codificador es que no hay entrada 0.
+  Una entrada cero significa una salida 1111 (en D, C, B y A) que es verdadera cuando todas las entradas del 1-9 están desconectadas.
+  Cuando las entradas no están conectadas, se dice que están flotando.<br/><br/>
+  En la figura se presenta el diagrama de bloques y la tabla de verdad de un codificador comercial denominado de prioridad de 10-4 líneas.<br/><br/>
+  <center><img src="Codificador10.jpg"></center>
+</p>
+<p align="justify">
+
+<center><img src="codificador74.jpg"></center><br/><br/>
+</p>
+<p align="justify">
+La primera línea de la tabla de verdad indica que no hay entrada. Cuando todas las entradas flotan el alto,
+las salidas flotan en alto, lo cual es interpretado como 0000 por los indicadores de salidas.<br/>
+La segunda línea de la tabla muestra la entrada decimal 9 activada por un nivel bajo, lo que
+produce LHHL en la salida. Esta salida la invierten los cuatro inversores y en los indicadores BCD se lee 1001.
+En la misma línea se muestra las entradas del 1 al 8 marcadas con X (irrelevante).<br/><br/>
+Una entrada irrelevante puede estar alta o baja. Este codificador tiene una característica de prioridad, que activa
+él número mayor que tenga una entrada en baja. Si por ejemplo tenemos un nivel bajo en el 3 y en 8, el codificador dará una salida en
+binario correspondiente al
+numero mayor, en este caso el 8.<br/>
+En la figura se presenta el diagrama lógico del codificador 74147, donde se presentan las 30 puertas lógicas que lo conforman.<br/><br/>
+<center><img src="codificador147.jpg"></center><br/><br/>
+<center>A continuacion se adjunta un video para mejor comprensión del tema<center/><br/><br/>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/FYNHdbbO2b8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+
+</p>
+ </body>
+</html>
